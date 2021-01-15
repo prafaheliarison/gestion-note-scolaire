@@ -1,0 +1,15 @@
+version: '3.3'
+
+services:
+  sayna-pma:
+    image: phpmyadmin/phpmyadmin
+    container_name: sayna-pma
+    ports:
+      - 7001:80
+    networks:
+      - sayna-network
+    environment:
+      PMA_HOST: sayna-db
+      PMA_PORT: 3306
+      PMA_USER: sayna-user
+      PMA_PASSWORD: password
